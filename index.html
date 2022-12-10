@@ -96,6 +96,20 @@
         height: 35px;
         margin-top: 40px;
         margin-right:3px;
+        margin: 1%;
+    }
+    .imgp{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+        margin: 1%;
     }
     .m1{
         border-color: gray;
@@ -114,6 +128,16 @@
         list-style-type: none;
         font-size: 25px;
     }
+    .imgb{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .vs {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 <html>
 
@@ -127,6 +151,7 @@
        $(document).ready(function(){
             $(".sub").slideUp(0)
             $(".sub2").slideUp(0)
+            $(".imgb").slideUp(0)
             for(i = 0;i<$(".main").length;++i){
                 $(".main:eq("+i+")").click({id:i},function(e){
                     n=e.data.id
@@ -139,6 +164,13 @@
                     n=e.data.id
                     $(".sub2:eq("+n+")").slideToggle();
                     $(".sub2:not(:eq(" + n + "))").slideUp();
+                })
+            }
+            for(i = 0;i<$(".imgp").length;++i){
+                $(".imgp:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    $(".imgb:eq("+n+")").slideToggle();
+                    $(".imgb:not(:eq(" + n + "))").slideUp();
                 })
             }
             $("#menu").css("width",$(".main").length*100)
@@ -248,6 +280,9 @@
             <div class="mo" >
                 <a style="color:white;">菜單</a>
             </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
             <div class="sub2">
                 <ul class="m1">
                     <li>招牌水餃/鍋貼  6元</li>
@@ -267,15 +302,20 @@
                     <li>白豆漿  15元</li>
                 </ul>  
             </div>
-		    <img class="img" src="23.jpg">
 		    <p style=font-size:smaller:>不知道吃什麼就選擇八方，輔園內排隊隊伍人數最為多的一家店</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="23.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="夯鮮子鮮果鋪" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">夯鮮子鮮果鋪</div>
             <div class="mo" >
                 <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
             </div>
             <div class="sub2">
                 <ul class="m1">
@@ -285,15 +325,20 @@
                     <li>新鮮果汁系列  55元</li>
                 </ul>  
             </div>
-            <img class="img" src="24.jpg">
 		    <p style=font-size:smaller:>販售切好的水果外還賣有現打果汁。</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb">
+        <img class="img" src="24.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="食福簡餐" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">食福簡餐</div>
             <div class="mo" >
                 <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
             </div>
             <div class="sub2">
                 <ul class="m1">
@@ -307,16 +352,21 @@
                     <li>香腸蛋炒飯  80元</li>
                     <li>豆腐味噌湯  20元</li>
                 </ul>  
-            </div>
-            <img class="img" src="201.jpg">
+            </div> 
 		    <p style=font-size:smaller:>物超所值，75元新台幣及附菜及湯品</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb">
+        <img class="img" src="201.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="雲瀚哨子麵" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">雲瀚哨子麵</div>
             <div class="mo" >
                 <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
             </div>
             <div class="sub2">
                 <ul class="m1">
@@ -341,24 +391,34 @@
                     
                 </ul>  
             </div>
-            <img class="img" src="28.jpg">
 		    <p style=font-size:smaller:>咖哩味道令人意猶未盡。</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb">
+        <img class="img" src="28.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="新東家滷味" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">新東家滷味</div>
-		<img class="img" src="25.jpg">
-		<img class="img" src="26.jpg">
-		<img class="img" src="27.jpg">
-		<p style=font-size:smaller:>校內早餐好選擇</p>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+		    <p style=font-size:smaller:>校內早餐好選擇</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb">
+        <img  src="25.jpg" style="height:30% ;width: 30%;">
+        <img  src="26.jpg" style="height:30% ;width: 30%;">
+        <img  src="27.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="新羅韓式料理" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">新羅韓式料理</div>
             <div class="mo" >
                 <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
             </div>
             <div class="sub2">
                 <ul class="m1">
@@ -374,14 +434,19 @@
                     <li>辣炒年糕  60元 加麵  75元</li> 
                 </ul>  
             </div>
-            <img class="img" src="202.jpg">
         </div>
+    </div>
+    <div style="width:100%;" class="imgb">
+        <img class="img" src="202.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="廚師豬排" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">廚師豬排</div>
             <div class="mo" >
                 <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
             </div>
             <div class="sub2">
                 <ul class="m1">
@@ -396,8 +461,10 @@
                     <li>什錦燴飯  80元</li> 
                 </ul>  
             </div>
-            <img class="img" src="200.jpg">
         </div>
+    </div>
+    <div style="width:100%;" class="imgb">
+        <img class="img" src="200.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="茶壜" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
@@ -415,6 +482,9 @@
             <div class="mo" >
                 <a style="color:white;">店家推薦</a>
             </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
             <div class="sub2">
                 <ul class="m1">
                     <li>香酥菠蘿麵包  35元</li>
@@ -431,9 +501,11 @@
                     <li>玫瑰蘋果重乳駱  70元</li> 
                 </ul>  
             </div>
-            <img class="img" src="204.jpg">
 		    <p style=font-size:smaller:>下午茶首選之地，販有各式甜點，套餐系列也十分划算，蛋塔部分大推</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb">
+        <img class="img" src="204.jpg" style="height:30% ;width: 30%;">
     </div>
 </body>
 
