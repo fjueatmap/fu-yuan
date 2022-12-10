@@ -85,6 +85,35 @@
         display: flex;
         justify-content: center;
     }
+    .mo{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+    }
+    .m1{
+        border-color: gray;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 1%;
+        width: 40%;
+        position: absolute;
+        text-align: center;
+        color: white;
+        font-family: setofont;
+    }
+    .m1 li{
+        float: left;
+        margin-right:25px;
+        list-style-type: none;
+        font-size: 25px;
+    }
 </style>
 <html>
 
@@ -97,6 +126,7 @@
     <script>
        $(document).ready(function(){
             $(".sub").slideUp(0)
+            $(".sub2").slideUp(0)
             for(i = 0;i<$(".main").length;++i){
                 $(".main:eq("+i+")").click({id:i},function(e){
                     n=e.data.id
@@ -104,9 +134,6 @@
                     $(".sub:not(:eq(" + n + "))").slideUp();
                 })
             }
-            $("#menu").css("width",$(".main").length*100)
-            $('img[usemap]').rwdImageMaps();
-            $(".sub2").slideUp(0)
             for(i = 0;i<$(".mo").length;++i){
                 $(".mo:eq("+i+")").click({id:i},function(e){
                     n=e.data.id
@@ -114,6 +141,9 @@
                     $(".sub2:not(:eq(" + n + "))").slideUp();
                 })
             }
+            $("#menu").css("width",$(".main").length*100)
+            $('img[usemap]').rwdImageMaps();
+            
        })
     </script>
 </head>
@@ -214,8 +244,29 @@
     </div>
     <div id="八方雲集" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
-            <div class="text" style=" width: 80px;;height: 80px;">八方雲集</div>
-            <img class="img" src="picture/21.jpg">
+            <div class="text" style=" width: 6%;height: 80%;">八方雲集</div>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>招牌水餃/鍋貼  6元</li>
+                    <li>韭菜水餃/鍋貼  6元</li>
+                    <li>韓式水餃/鍋貼  6元</li>
+                    <li>玉米水餃/鍋貼  6元</li>
+                    <li>咖哩雞肉水餃/鍋貼  6元</li>
+                    <li>素食水餃/鍋貼  6.5元</li>
+                    <li>酸辣湯餃  70元</li>
+                    <li>玉米湯餃  70元</li>
+                    <li>旗魚花枝丸湯餃  70元</li>
+                    <li>蛋花湯餃  70元</li>
+                    <li>酸辣湯  30元</li>
+                    <li>玉米濃湯  30元</li>
+                    <li>旗魚花枝丸湯  30元</li>
+                    <li>蛋花湯  30元</a>
+                    <li>白豆漿  15元</li>
+                </ul>  
+            </div>
 		    <img class="img" src="23.jpg">
 		    <p style=font-size:smaller:>不知道吃什麼就選擇八方，輔園內排隊隊伍人數最為多的一家店</p>
         </div>
@@ -223,6 +274,17 @@
     <div id="夯鮮子鮮果鋪" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">夯鮮子鮮果鋪</div>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>夢幻鮮果汁系列  65元</li>
+                    <li>現切水果  55元</li>
+                    <li>夯先子牛奶系列  60元</li>
+                    <li>新鮮果汁系列  55元</li>
+                </ul>  
+            </div>
             <img class="img" src="24.jpg">
 		    <p style=font-size:smaller:>販售切好的水果外還賣有現打果汁。</p>
         </div>
@@ -230,6 +292,22 @@
     <div id="食福簡餐" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">食福簡餐</div>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>火腿蛋炒飯  75元</li>
+                    <li>培根蛋炒飯  75元</li>
+                    <li>肉絲蛋炒飯  75元</li>
+                    <li>泡菜肉絲蛋炒飯  75元</li>
+                    <li>雞肉絲蛋炒飯  75元</li>
+                    <li>養生素蛋炒飯  75元</li>
+                    <li>蝦仁蛋炒飯  80元</li>
+                    <li>香腸蛋炒飯  80元</li>
+                    <li>豆腐味噌湯  20元</li>
+                </ul>  
+            </div>
             <img class="img" src="201.jpg">
 		    <p style=font-size:smaller:>物超所值，75元新台幣及附菜及湯品</p>
         </div>
@@ -237,6 +315,32 @@
     <div id="雲瀚哨子麵" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">雲瀚哨子麵</div>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>哨子乾麵/粄條  小65元/大75元</li>
+                    <li>哨子飯  65元</li>
+                    <li>咖哩飯  80元</li>
+                    <li>咖哩乾拌麵  80元</li>
+                    <li>哨子/咖哩烏龍麵  85元</li>
+                    <li>養生素蛋炒飯  75元</li>
+                    <li>咖哩粄條  80元</li>
+                    <li>咖哩湯麵  80元</li>
+                    <li>餛飩麵  60元</li>
+                    <li>榨菜肉絲麵  60元</li>
+                    <li>綜合丸麵  60元</li>
+                    <li>貢丸麵  60元</li>
+                    <li>餛飩麵  60元</li>
+                    <li>雪蝦丸麵  60元</li>
+                    <li>綜合丸湯  30元</li>
+                    <li>貢丸湯  30元</li>
+                    <li>餛飩湯  35元</li>
+                    <li>雪蝦丸湯  30元</li>
+                    
+                </ul>  
+            </div>
             <img class="img" src="28.jpg">
 		    <p style=font-size:smaller:>咖哩味道令人意猶未盡。</p>
         </div>
@@ -253,12 +357,45 @@
     <div id="新羅韓式料理" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">新羅韓式料理</div>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>烤肉飯  110元</li>
+                    <li>烤肉湯麵  110元</li>
+                    <li>烤肉拌飯  110元</li>
+                    <li>海鮮豆腐辣湯  100元</li>
+                    <li>泡菜豆腐辣湯  100元</li>
+                    <li>海鮮鍋燒  100元</li>
+                    <li>年糕湯 90元</li>
+                    <li>泡菜豬肉鍋  120元</li>
+                    <li>每日特餐  90元</li>
+                    <li>辣炒年糕  60元 加麵  75元</li> 
+                </ul>  
+            </div>
             <img class="img" src="202.jpg">
         </div>
     </div>
     <div id="廚師豬排" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">廚師豬排</div>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>風味豬排  80元</li>
+                    <li>香酥雞排餐  80元</li>
+                    <li>蜜汁滷豬排餐  80元</li>
+                    <li>綜合豬排餐  80元</li>
+                    <li>招牌燒肉飯  75元</li>
+                    <li>滷雞腿餐  75元</li>
+                    <li>黑胡椒雞丁餐 70元</li>
+                    <li>上海菜飯  60元</li>
+                    <li>什錦燴飯  80元</li> 
+                </ul>  
+            </div>
             <img class="img" src="200.jpg">
         </div>
     </div>
@@ -275,6 +412,25 @@
     <div id="麵包店" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">麵包店</div>
+            <div class="mo" >
+                <a style="color:white;">店家推薦</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>香酥菠蘿麵包  35元</li>
+                    <li>六葉大蒜乳酪包  50元</li>
+                    <li>冰火菠蘿  45元</li>
+                    <li>熔岩起司菠蘿  50元</li>
+                    <li>嫩煎牛肉堡  60元</li>
+                    <li>法式豬排堡  65元</li>
+                    <li>巧克力/起司QQ球  25元</li>
+                    <li>冰心脆皮蛋塔  100元</li>
+                    <li>焦糖烤布丁(四入)  120元</li> 
+                    <li>巧克力四葉鮮菓子  25元</li>
+                    <li>藍莓重乳酪  70元</li>
+                    <li>玫瑰蘋果重乳駱  70元</li> 
+                </ul>  
+            </div>
             <img class="img" src="204.jpg">
 		    <p style=font-size:smaller:>下午茶首選之地，販有各式甜點，套餐系列也十分划算，蛋塔部分大推</p>
         </div>
